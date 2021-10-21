@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="I_ngilizce_oyun" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-mD-efZ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-bN-cyo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjt-7o-mcI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="266"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="İngilizceden Türkçeye"/>
+                                        <connections>
+                                            <action selector="testChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yOh-lf-xP9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nasıl oynamak istediğinizi seçiniz" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJj-3G-x4c">
+                                        <rect key="frame" x="0.0" y="276" width="414" height="266"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxP-q8-QR4">
+                                        <rect key="frame" x="0.0" y="552" width="414" height="266"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Türkçeden İngilizceye"/>
+                                        <connections>
+                                            <action selector="testChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1em-BP-Xc7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="CJj-3G-x4c" firstAttribute="centerY" secondItem="hZb-bN-cyo" secondAttribute="centerY" id="8zL-4h-b1b"/>
+                                    <constraint firstItem="Kjt-7o-mcI" firstAttribute="centerY" secondItem="hZb-bN-cyo" secondAttribute="centerY" id="OI3-9l-XtB"/>
+                                    <constraint firstItem="CJj-3G-x4c" firstAttribute="centerX" secondItem="hZb-bN-cyo" secondAttribute="centerX" id="Qj0-ck-Pnn"/>
+                                    <constraint firstItem="CxP-q8-QR4" firstAttribute="centerX" secondItem="hZb-bN-cyo" secondAttribute="centerX" id="uM5-Jn-aXI"/>
+                                    <constraint firstItem="Kjt-7o-mcI" firstAttribute="centerX" secondItem="hZb-bN-cyo" secondAttribute="centerX" id="zLp-j0-Dsw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Z5Q-mD-efZ" secondAttribute="trailing" id="1nF-TU-Pbi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hZb-bN-cyo" secondAttribute="trailing" id="6vQ-pz-H4d"/>
+                            <constraint firstAttribute="bottom" secondItem="Z5Q-mD-efZ" secondAttribute="bottom" constant="34" id="Mwd-Ls-aNx"/>
+                            <constraint firstItem="hZb-bN-cyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OrJ-GZ-WFD"/>
+                            <constraint firstItem="Z5Q-mD-efZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dSP-8v-PQK"/>
+                            <constraint firstItem="hZb-bN-cyo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="en4-dQ-W6i"/>
+                            <constraint firstItem="hZb-bN-cyo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fAQ-di-c3H"/>
+                            <constraint firstItem="hZb-bN-cyo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nFg-Fp-jLz"/>
+                            <constraint firstItem="Z5Q-mD-efZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="rwJ-z8-ieG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hZb-bN-cyo" secondAttribute="bottom" id="wUh-g7-cZp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseYourTest" destination="CJj-3G-x4c" id="L6p-jx-L70"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="122" y="91"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
